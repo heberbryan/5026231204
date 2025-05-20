@@ -1,0 +1,60 @@
+body {
+    font-family: "Montserrat";
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+p {
+    text-decoration: solid;
+}
+
+a:link{
+    color: rgb(43, 4, 79);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(239, 184, 5);
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+a:visited{
+    color: rgb(43, 4, 79);
+    text-decoration: none;
+}
+
+.kalimatpembuka{
+    font-size: x-large;
+    border: chocolate;
+    border-radius: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #2c3e50;
+}
+.author {
+    font-size: 14px;
+    color: #777;
+}
+img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
