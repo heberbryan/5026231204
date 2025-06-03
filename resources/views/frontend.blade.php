@@ -11,7 +11,7 @@
         <div class="grid">
             <a href="{{ url('/bootstrap1') }}" class="card">bootstrap1</a>
             <a href="{{ url('/bootstrap2') }}" class="card">bootstrap2</a>
-            <a href="{{ url('/index') }}" class="card">pagepagination</a>
+            <a href="{{ url('/indextugas') }}" class="card">pagepagination</a>
             <a href="{{ url('/js1') }}" class="card">js1</a>
             <a href="{{ url('/js2') }}" class="card">js2</a>
             <a href="{{ url('/login') }}" class="card">login</a>

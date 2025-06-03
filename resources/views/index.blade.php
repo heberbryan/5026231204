@@ -1,39 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>Page #1</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
 </head>
+
 <body>
-    <h1>This is page #1</h1>
 
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad voluptatibus dolor animi enim ullam. Dolorum asperiores cumque natus tempora accusamus, itaque eius voluptate ab labore. Atque dolore vel asperiores!</p>
+    <h2>www.malasngoding.com</h2>
+    <h3>Data Pegawai</h3>
 
-    <div class="pagination">
-        <a href="index.html"><</a>
-        <a href="index.html" class="active">1</a>
-        <a href="page2.html">2</a>
-        <a href="page3.html">3</a>
-        <a href="page4.html">4</a>
-        <a href="page5.html">5</a>
-        <a href="page2.html">></a>
+    <a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
 
-    </div>
-    <h2> Demo CSS Color Keywords</h2>
+    <br />
+    <br />
 
-    <div class="color-box transparent-box">
-        <p> Ini adalah box dengan transparant background</p>
-    </div>
+    <table border="1">
+        <tr>
+            <th>Nama</th>
+            <th>Jabatan</th>
+            <th>Umur</th>
+            <th>Alamat</th>
+            <th>Opsi</th>
+        </tr>
+        @foreach ($pegawai as $p)
+            <tr>
+                <td>{{ $p->pegawai_nama }}</td>
+                <td>{{ $p->pegawai_jabatan }}</td>
+                <td>{{ $p->pegawai_umur }}</td>
+                <td>{{ $p->pegawai_alamat }}</td>
+                <td>
+                    <a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+                    |
+                    <a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+                </td>
+            </tr>
+        @endforeach
+    </table>
 
-    <div class="color-box currentcolor-box">
-        <p> Ini adalah box dengan border dan shadow sesuai warna text</p>
-    </div>
-
-    <div class="color-box inherit-box">
-        <p> Box ini memiliki border merah</p>
-        <span class="inherit-span">Span ini mewarisi border dari box</span>
-    </div>
 
 </body>
+
 </html>
