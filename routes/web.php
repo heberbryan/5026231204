@@ -87,6 +87,8 @@ Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update/', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
 
 // route blog
 Route::get('/blog', [BlogController::class, 'home']);
