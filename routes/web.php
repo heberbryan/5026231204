@@ -5,6 +5,7 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TugasCRUD;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -94,4 +95,13 @@ Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+// route untuk CRUD meja
+Route::get('/meja', [TugasCRUD::class, 'index']);
+Route::get('/meja/tambah', [TugasCRUD::class, 'tambah']);
+Route::post('/meja/store', [TugasCRUD::class, 'store']);
+Route::get('/meja/edit/{id}', [TugasCRUD::class, 'edit']);
+Route::post('/meja/update/', [TugasCRUD::class, 'update']);
+Route::get('/meja/hapus/{id}', [TugasCRUD::class, 'hapus']);
+Route::get('/meja/cari', [TugasCRUD::class, 'cari']);
 ?>
