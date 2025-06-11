@@ -1,35 +1,35 @@
 @extends('template')
 
 @section('content')
-    <h3>Edit Data Plastik</h3>
+    <h3>Edit Data Meja</h3>
 
-    <a href="/plastik" class="btn btn-info"> Kembali</a>
+    <a href="/meja" class="btn btn-info"> Kembali</a>
 
     <br />
     <br />
 
-    @foreach ($plastik as $p)
-        <form action="/plastik/update" method="post" class="form-horizontal">
+    @foreach ($meja as $m)
+        <form action="/meja/update" method="post" class="form-horizontal">
             @csrf
-            <input type="hidden" name="id" value="{{ $p->ID }}">
+            <input type="hidden" name="id" value="{{ $m->ID }}">
 
             <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="merkplastik">
-                    Merk Plastik
+                <label class="control-label col-sm-2" for="merkmeja">
+                    Merk meja
                 </label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" id="merkplastik" name="merk" required="required"
-                        value="{{ $p->merkplastik }}">
+                    <input class="form-control" type="text" id="merkmeja" name="merk" required="required"
+                        value="{{ $m->merkmeja }}">
                 </div>
             </div>
 
             <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="hargaplastik">
+                <label class="control-label col-sm-2" for="hargameja">
                     Harga
                 </label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="number" id="hargaplastik" name="harga" required="required"
-                        value="{{ $p->hargaplastik }}">
+                    <input class="form-control" type="number" id="hargameja" name="harga" required="required"
+                        value="{{ $m->hargameja }}">
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                 </label>
                 <div class="col-sm-6">
                     <input class="form-control" type="number" id="tersedia" name="tersedia" required="required"
-                        value="{{ $p->tersedia }}" placeholder="Masukkan angka 1 atau 0">
+                        value="{{ $m->tersedia }}" placeholder="Masukkan angka 1 atau 0">
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <div class="col-sm-6">
                     {{-- step="any" digunakan untuk mengizinkan angka desimal/float --}}
                     <input class="form-control" type="number" step="any" id="berat" name="berat"
-                        required="required" value="{{ $p->berat }}">
+                        required="required" value="{{ $m->berat }}">
                 </div>
             </div>
 

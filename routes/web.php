@@ -6,6 +6,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TugasCRUD;
+use App\Http\Controllers\LatihanUAS;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -104,4 +106,11 @@ Route::get('/meja/edit/{id}', [TugasCRUD::class, 'edit']);
 Route::post('/meja/update/', [TugasCRUD::class, 'update']);
 Route::get('/meja/hapus/{id}', [TugasCRUD::class, 'hapus']);
 Route::get('/meja/cari', [TugasCRUD::class, 'cari']);
+
+// route untuk CRUD meja
+Route::get('/karyawan', [LatihanUAS::class, 'index']);
+Route::get('/karyawan/tambah', [LatihanUAS::class, 'tambah']);
+Route::post('/karyawan/store', [LatihanUAS::class, 'store']);
+Route::post('/karyawan/update/', [LatihanUAS::class, 'update']);
+Route::get('/karyawan/hapus/{id}', [LatihanUAS::class, 'hapus']);
 ?>
