@@ -7,6 +7,8 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TugasCRUD;
 use App\Http\Controllers\LatihanUAS;
+use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\TrafficController;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,4 +115,15 @@ Route::get('/karyawan/tambah', [LatihanUAS::class, 'tambah']);
 Route::post('/karyawan/store', [LatihanUAS::class, 'store']);
 Route::post('/karyawan/update/', [LatihanUAS::class, 'update']);
 Route::get('/karyawan/hapus/{id}', [LatihanUAS::class, 'hapus']);
+
+//route keranjang belanjaAdd commentMore actions
+
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'indexkeranjangbelanja']);
+Route::get('/keranjangbelanja/belikeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'belikeranjangbelanja']);
+Route::get('/keranjangbelanja/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
+Route::post('/keranjangbelanja/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
+Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
+
+//route untuk LATIHAN 2Add commentMore actions
+Route::get('/pagecounter', [TrafficController::class, 'index']);
 ?>
