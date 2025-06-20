@@ -2,7 +2,7 @@
 
 @section('content')
 	<h3>Keranjang Belanja</h3>
-
+	<a href="/keranjangbelanja/beli" class="btn btn-primary">Beli</a>
 	<br/>
 
 	<table class="table table-striped">
@@ -18,18 +18,14 @@
 		<tr>
             <td>{{ $item->ID}}</td>
             <td>{{ $item->KodeBarang }}</td>
-			<td>{{ number_format($item->Jumlah, 0, ',', '.') }}</td>
+			<td>{{ $item->Jumlah }}</td>
 			<td>{{ number_format($item->Harga, 0, ',', '.') }}</td>
 			<td>{{ number_format($item->Jumlah * $item->Harga, 0, ',', '.') }}</td>
 			<td>
-				<a href="/keranjangbelanja/belikeranjangbelanja/{{ $item->ID }}" class="btn btn-success">Beli</a>
-				<a href="/keranjangbelanja/batalkeranjangbelanja/{{ $item->ID }}" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">Batal</a>
+				<a href="/keranjangbelanja/batal/{{ $item->ID }}" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">Batal</a>
 				</form>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-
-    {{ $keranjangbelanja->links() }} <!-- ini untuk pagination, jadi nanti di bawah tabel ada paginationnya -->
-
 @endsection

@@ -9,6 +9,9 @@ use App\Http\Controllers\TugasCRUD;
 use App\Http\Controllers\LatihanUAS;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\TrafficController;
+use App\Http\Controllers\NewKaryawanController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -126,4 +129,11 @@ Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaControl
 
 //route untuk LATIHAN 2Add commentMore actions
 Route::get('/pagecounter', [TrafficController::class, 'index']);
+
+//route untuk EASAdd commentMore actions
+Route::get('/eas', [NewKaryawanController::class,'index']);
+Route::get('/eas/tambah', [NewKaryawanController::class,'tambah']);
+Route::post('/eas/store', [NewKaryawanController::class,'store']);
+Route::post('/eas/update', [NewKaryawanController::class,'update']);
+Route::get('/eas/hapus/{id}', [NewKaryawanController::class,'hapus']);
 ?>
